@@ -1,0 +1,40 @@
+
+// Allow GitHub image rendering
+:imagesdir: ../images
+
+[[ocwg-get-in-contact]]
+== Get in Contact
+
+Find people who have experience in network management and monitoring on several places.
+You can ask questions by using our topic driven mailing list.
+All this mailing lists can be found on the link:http://www.opennms.org/wiki/Mailing_lists[Mailing Lists page] in the wiki.
+Talk with people in realtime using link:https://en.wikipedia.org/wiki/Internet_Relay_Chat[IRC] the link:https://kiwiirc.com/client/irc.freenode.net/#opennms[freenode network and join channel #opennms].
+With the link:http://ask.opennms.eu[Q&A] platform you can find help or send your own questions.
+
+Beside mail, chat and the Q&A forum it is also possible to get in contact in real lifefootnote:[Real Life: A place with awesome graphic and you can get hurt].
+There are two conferences organized by the OpenNMS community:
+
+* link:http://www.opennms.org/wiki/Dev-Jam[DevJam]: The 5th season of the year to hack, learn and work for one week with people on _OpenNMS_.
+  The annual conference is held at the University of Minnesota in Minneapolis in June/July.
+* link:https://www.youtube.com/user/opennms/videos[OUCE]: This is the link:http://www.opennms.eu/[OpenNMS User Conference Europe] which is organized from the OpenNMS Foundation Europe e.V. (OFE).
+  Talks and workshops are given by people from the community.
+
+There are several places where you can get news and information around the _OpenNMS_ project.
+
+.Social Media
+* Twitter: link:https://twitter.com/opennms[@opennms]
+* YouTube Channel: link:http://www.youtube.com/user/opennms[http://www.youtube.com/user/opennms]
+* GooglePlus link:https://plus.google.com/u/0/105624063334939417498/about[The OpenNMS Group, Inc]
+* GooglePlus link:https://plus.google.com/u/0/101054696280784935711/about[OpenNMS Foundation Europe e.V.]
+* GooglePlus link:https://plus.google.com/u/0/103841818268198364395/about[Ulf]
+* Facebook: link:https://www.facebook.com/OpenNMS[The OpenNMS Group]
+
+.Blogs and other content
+* OpenNMS community: link:http//www.opennms.org[http://www.opennms.org]
+* The OpenNMS Group Inc.: link:http//www.opennms.com[http://www.opennms.com]
+* Blogs of users and developers: link:http://planet.opennms.org/[http://planet.opennms.org/]
+* OUCE conference management system: link:http://ouce.opennms.eu[http://ouce.opennms.eu]
+* OpenNMS in UK: link:http://www.opennms.co.uk[http://www.opennms.co.uk]
+* OpenNMS Foundation Europe e.V.: link:http://www.opennms.eu[http://www.opennms.eu]
+* Q&A Forum: link:http://ask.opennms.eu[http://ask.opennms.eu]
+* Tarus Blog: link:http://www.adventuresinoss.com/[http://www.adventuresinoss.com]

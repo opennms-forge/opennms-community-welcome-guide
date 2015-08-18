@@ -1,0 +1,22 @@
+
+// Allow GitHub image rendering
+:imagesdir: ../images
+
+[[ocwg-contribution]]
+== Contribution
+
+Rather than just using software there are several possibilities to contribute in the community.
+Reporting a bug, make suggestions for enhancements, help improving documentation or write in a blog how you solved a special problem are ways to enrich the project.
+In most cases you start with using _OpenNMS_ in your environment and with more experience you may find bugs in the software.
+_OpenNMS_ uses _JIRA_ as bug and issue tracking software.
+We use it not just for tracking bugs it is also the core component to release the software and plan new features and enhancements.
+To create issues it is required to create _JIRA_ account.
+
+If you are able fix open issues with code patches or you just want to provide source code contribution with patches, you have to sign the _OpenNMS Contribution Agreement_.
+This is a fundamental requirement to get your source code contribution merged to the main release of _OpenNMS_.
+Contributing documentation is a great possibility to learn new features or fill gapes and give you the possibility to share your learning experience.
+It is also a great way to figure out where are limitations and opens other possibilities to help improving the software.
+
+In the _OpenNMS_ community there are two main events, _DevJam_ and _OUCE_.
+Both conferences are organized by volunteers and happy for help organizing the event.
+From running call for papers, help organizing projects, giving talks, workshops or help preparing the infrastructure there are several tasks you can get involved.

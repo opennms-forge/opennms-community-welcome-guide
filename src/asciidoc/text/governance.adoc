@@ -1,0 +1,51 @@
+
+// Allow GitHub image rendering
+:imagesdir: ../images
+
+[[ocwg-governance]]
+== Governance
+
+The project is mainly driven by The OpenNMS Group, Inc. and an elected group of community contributors _OGP_.
+_OGP_ and people from _The OpenNMS Group, Inc._ have commit access to the project where the software is released and distributed.
+Most decisions will be made using a _lazy consensus_ model.
+
+[[ocwg-opennms-group]]
+=== The OpenNMS Group, Inc.
+
+The OpenNMS Group, Inc. is the biggest sponsor of the project and provides a commercial product _OpenNMS MERIDIAN_ which is similar to Red Hats Enterprise Linux subscription.
+Beside that they also develop new features through _OpenNMS HORIZON_ which is similar to Red Hats Fedora and free as in freedom.
+The build and packaging infrastructure is also maintained and provided by the commercial company.
+
+[[ocwg-opennms-foundation]]
+===  OpenNMS Foundation Europe e.V.
+
+Getting people independent from companies to the project, there is a non-profit foundation based in Germany.
+Organizations and individuals can apply to become new members.
+Details on membership can be found on http://www.opennms.eu/membership.
+
+The _OpenNMS Foundation Europe e.V._ (OFE) was founded on July 31st, 2012.
+The objective of the organization is to promote, develop, educate and research around free software and network (management) technologies, especially _OpenNMS_.
+The OFE web site with links to material of the conference can be found at http://www.opennms.eu.
+
+_OFE_ promotes the development, usage and adoption of the network management platform _OpenNMS_.
+Getting people with different skill sets together is important and for this reason they run the annual _OpenNMS User Conference Europe_ (OUCE).
+This conference is run by foundation members and volunteers.
+The _OFE_ initiates software development and studies which are made available to the public under the _GPL_ or a suitable successor.
+
+The statutes of the foundation can be found at http://www.opennms.eu/statutes (in German).
+Members are expected to participate in the _OpenNMS_ community through technical contributions or community building efforts.
+
+[[ocwg-ogp]]
+=== Order of the Green Polo
+
+The Order of the Green Polo (OGP) is the super secret brotherhood of developers of the _OpenNMS Project_.
+You can recognize and _OGP_ member by their good looks as well as their super-flashy, very coveted _OpenNMS Green Polo_.
+
+[quote, Tarus Balog, Founder of the OpenNMS Project]
+Back in fall of 2004, I wanted to find a way to recognize those people who make _OpenNMS_ what it is, and to thank them in some fashion.
+Ever since the advent of "business casual" workplace attire, the "logo" polo shirt has become a fixture in IT departments around the world.
+We sell black and white polos with the _OpenNMS_ logo on our web site.
+But this is much, much, much, different.
+These are "green" polos, very rare, and they will never be available for sale.
+Think of them as equivalent to winning _The Masters_ golf tournament's green jacket - only harder to get.
+In order to get one, all one has to do is give up all hope of having a life outside of _OpenNMS_, work long hours for free, and basically become a closed superhero, squashing bugs (or uncovering existence) in a single bound.

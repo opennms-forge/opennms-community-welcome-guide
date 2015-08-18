@@ -1,0 +1,66 @@
+
+// Allow GitHub image rendering
+:imagesdir: ../images
+
+[[ocwg-what-is-opennms]]
+== What is OpenNMS
+
+_OpenNMS_ is a free and open network management platform to give you the ability to solve problems in the domain of FCAPS footnote:[ISO Telecommunications Management Network model and framework for Fault, Configuration, Accounting, Performance and Security categories] developed under the link:http://www.gnu.org/licenses/agpl-3.0.html[GNU Affero General Public License Version 3] license.
+Main focus of _OpenNMS_ is fault- and performance management.
+The application gives you access to the management data through a web interface and open a _ReST API_.
+The _OpenNMS_ project is a collaboration of developers and network management specialists around the world, aiming to produce an open standard for a network management platform.
+
+The project aims to deliver a solution for all types of network management issues, massively scalable and feature-rich.
+The technology consists of a series of interrelated programs delivering various components for network management solution.
+
+.OpenNMS high components
+image::highlevel-components.png[highlevel-components.png]
+
+.Service Assurance
+Detecting faults for services is an essential.
+With _Service Assurance_ we mean in _OpenNMS_ everything related to the availability of a service.
+_OpenNMS_ measures response times, availability and detect outages.
+The results are forwarded as _Events_ through an _OpenNMS_ internal messaging system and can be used for further incident workflows.
+
+.Performance Data Collection
+Applications and network systems provide valuable performance metrics through management protocols or specific interfaces.
+_OpenNMS_ provides access to management protocols like _SNMP_, _JDBC_, _JMX_, _WMI_ or _NSClient_ without coding just through configuration.
+To be able to integrate application specific performance data it is possible to use a generic _HTTP_ collector and can also be combined with a generic _XML collector_.
+
+.Provisioning
+Large networks build workflows to define a life cycle of devices and applications in a network.
+The _Provisioning system_ provides entry points in the UI, on the command line, and via programming interfaces to allow you to add, modify, and remove nodes and services.
+In addition to specifying what to manage up front, services and nodes can also be automatically detected and the system allows a flexible mixture of both types of provisioning.
+
+.Notifications
+Monitoring services is not enough and it is often necessary to establish workflows to get peoples attention to deal with outages.
+With an extensible _Notification_ system you can notify and build escalation plans for users and groups.
+_Notifications_ can be send via several media types like Mail, Jabber or SMS.
+The basis for _Notifications_ in OpenNMS are _Events_.
+
+.Alarms and Event Correlation
+_Alarms_ are generated from _Events_ and are on a higher level.
+To correlate _Events_ to _Alarms_ there is a build in _Event_ deduplication and allows the usage of link:http://drools.org/[Drools].
+_Alarms_ can be integrated into service desk or incident management systems, i.e. link:http://www.otrs.org/[OTRS], link:https://bestpractical.com/rt/[RT].
+
+.ReST API
+To allow integration in complex environments _OpenNMS_ provides a variety of link:http://docs.opennms.org/OpenNMS/snapshot/develop/documentation/guide-development/#_rest_api[ReST programming interfaces].
+It is possible to get node assets, outages, alarms, notifications, events and collected performance data through a unified ReST API.
+
+.Event driven messaging
+Generated or received events are forwarded and processed internally by a event messaging system.
+The main function is to provide a communication bus for all components of _OpenNMS_.
+
+.Logging
+Beside _OpenNMS_ self generated events or detected service outages it is possible to use _OpenNMS_ as a central logging application.
+It supports supports external log messages like link:https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol#Trap[SNMP traps/informs] and link:https://en.wikipedia.org/wiki/Syslog[Syslog].
+By providing a extensible connector also 3rd party application can be used to generate monitoring events.
+
+.Management Protocols
+To provide access to management and monitoring information _OpenNMS_ natively implements the most common network management protocols like link:https://en.wikipedia.org/wiki/Java_Management_Extensions[JMX], link:https://en.wikipedia.org/wiki/Windows_Management_Instrumentation[WMI] and link:https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol[SNMP].
+Getting information from other application it is possible to gather information from 3rd party agents like link:http://www.nsclient.org/[NSClient++] or link:http://nagios.sourceforge.net/docs/nrpe/NRPE.pdf[NRPE].
+
+.API and Scripts for Extensions
+Sometimes there is no possibility to monitor a service by existing agents.
+To give flexibility the service monitoring can be extended by scripts supported by the link:https://en.wikipedia.org/wiki/Scripting_for_the_Java_Platform[JSR 223].
+With an open Java API for service monitoring and performance data collection there are also possibilities to extend _OpenNMS_ in an efficient and scalable way.

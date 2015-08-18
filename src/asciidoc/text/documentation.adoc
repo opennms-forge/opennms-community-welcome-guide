@@ -1,0 +1,28 @@
+
+// Allow GitHub image rendering
+:imagesdir: ../images
+
+[[ocwg-documentation]]
+== Documentation
+
+In _OpenNMS_ you can find two types of documentation.
+The first type is a link:https://en.wikipedia.org/wiki/MediaWiki[MediaWiki] based documentation.
+It is the place where you can find tutorials from users how to integrate with 3rd party applications or devices.
+This documentation can be easily edited and changed by any person with a link:http://www.opennms.org/wiki/Special:RequestAccount[registered account on the MediaWiki] and the change policy is not strict.
+The _Wiki_ based documentation can be found in http://www.opennms.org/wiki/Main_Page and is structured by categories.
+
+The second type is an link:https://en.wikipedia.org/wiki/AsciiDoc[Asciidoc] based documentation.
+This documentation is version controlled and will be shipped with _OpenNMS_ as official documentation.
+It is intended to document the full feature set of a specific _OpenNMS_ version and can be used as a reference.
+Any person with a registered link:https://github.com/[GitHub] account can provide changes as link:https://help.github.com/articles/using-pull-requests/[Pull Request] and follows the <<ocwg-code-contribution-workflow>>.
+People with commit permissions are allowed to review and merge such changes so they will be published with the next release of _OpenNMS_.
+With every _OpenNMS_ release the version controlled documentation will be build and deployed.
+The latest documentation can be found online on http://docs.opennms.org/OpenNMS/snapshot/develop/documentation/
+
+.Helpful links as starting point
+* link:http://wiki.opennms.org[OpenNMS Wiki]
+* link:http://www.opennms.org/wiki/Tutorial_Introduction[Tutorial Introduction]
+* link:http://www.opennms.org/wiki/Installation:Debian[Installation guide for Debian/Ubuntu]
+* link:http://www.opennms.org/wiki/Installation:Yum[Installation guide for CentOS/RHEL]
+* link:http://www.opennms.org/wiki/OpenNMS_and_Vagrant_with_VirtualBox[OpenNMS with Vagrant]
+* link:http://www.opennms.org/wiki/How_to_contribute[How to contribute guide]

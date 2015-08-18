@@ -1,0 +1,21 @@
+
+// Allow GitHub image rendering
+:imagesdir: ../images
+
+[[ocwg-hello-world]]
+== Hello World
+
+Welcome to the _OpenNMS community_ - the place of the world's first enterprise grade network management platform developed under the open source model.
+This document is meant for anyone interested in learning about the _OpenNMS_ project and the surrounding eco system.
+It is intended for people who are new to the project and give information you are looking for to get oriented.
+
+In this document you will learn the following topics:
+
+* What is OpenNMS
+* Where can you find documentation
+* How can you get in contact with users, developers in the community
+* Which organizational groups are involved and how is it governed
+* How to get involved and how to contribute in the project
+* How are issues and incidents managed and the development process
+
+We hope this guide will help and welcome you in our community with good looking and smart people.

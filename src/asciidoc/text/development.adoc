@@ -1,0 +1,126 @@
+
+// Allow GitHub image rendering
+:imagesdir: ../images
+
+[[ocwg-development]]
+== Development
+The _OpenNMS_ software is developed on _GitHub_ and is structured in several development branches.
+Different branches are the basis to develop new features and make a new release.
+The source code is maintained in a public link:https://github.com/OpenNMS/opennms[GitHub] repository.
+
+.Structure for _OpenNMS_ branches
+image::branches.png[]
+
+.Master Branch
+The master branch is used for stable releases.
+Changes are not committed directly to this branch, all changes go through the development.
+After a time period, described in section <<ocwg-release-management>>, features from development will be merged to master and are tagged as versions of _OpenNMS_.
+To ensure stable releases there will be release candidates defined and are public available as installation packages and can be tested.
+
+.Develop Branch
+The function of the _Develop Branch_ is used as integration branch for features, bug and hot fixes.
+Changes to this branch should only be driven from specific feature branches to the _Develop Branch_.
+
+.Feature Branch
+This branches are originated from the _Develop Branch_ and represent a specific enhancement or complete feature.
+The name of the this feature branches are described our issue tracking system link:http://issues.opennms.org[JIRA].
+To identify features to the issue tracking system, the branches start with the _JIRA issue number_.
+This is important for the reason _JIRA_ creates the _Release Notes_ which tracks all changes between versions.
+
+.Foundation Branch
+This special branch is used to get hot- or bug fixes back from the commercial _OpenNMS MERDIAN_.
+It is used by _The OpenNMS Group, Inc._ and gives a transparent way to see which fixes and features are back ported.
+
+[[ocwg-code-contribution-workflow]]
+=== Code Contribution Workflow
+
+With _GitHub_ comes the possibility to fork the whole code base of _OpenNMS_ and change code and documentation as you want.
+You want to contribute your changes back to the release of OpenNMS you can follow the link:https://help.github.com/articles/using-pull-requests/[GitHub Fork & Pull] development principle.
+_Pull Requests_ solve a specific issue and require an entry in our JIRA issue tracking system.
+These _Pull Requests_ have to be reviewed and has to pass tests before they can get merged from an OGP or OpenNMS Group member.
+
+.Workflow for code contribution
+image::contribution-workflow.png[]
+
+This workflow ensures code changes are tracked for release management driven by JIRA.
+The pull request review step is important to get a shared understanding about requested code changes and improve code stability and quality.
+
+[[ocwg-release-management]]
+=== Release management
+
+_OpenNMS_ is released and distributed in two flavors _HORIZON_ and _MERIDIAN_.
+Both distributions are released under the AGPLv3 license model.
+The _HORIZON_ release follows a main release cycle of 3-4 month.
+All new features are developed in _HORIZON_ and the repository is public.
+_The OpenNMS Group, Inc._ provides the _MERIDIAN_ distribution with commercial support and a main release cycle of ~12 month and support is given for an extended lifetime.
+Security and bugfix patches are maintained by _The OpenNMS Group, Inc._ and back ported between the two distributions.
+To get patches and fixes, it is required to have a _MERIDIAN_ subscription for the repository access.
+
+.Release relationship between HORIZON and MERIDIAN
+image::release-horizon-meridian.png[]
+
+Bugfixes and security patches are shared and new features will be moved from _HORIZON_ to _MERIDIAN_.
+The decision to release new features in _HORIZON_ is community driven and the for _MERIDIAN_ it is driven by _The OpenNMS Group, Inc._
+To release the software the community and _The OpenNMS Group_ uses the public available link:http://issues.opennms.org[JIRA] issue tracking software.
+
+.OpenNMS Horizon 4 month release phases
+image::release.png[]
+
+* _Development:_ Phase to develop new features, changes in architecture and major bug fixes.
+  This state can be installed as _OpenNMS Horizon SNAPSHOT_ release.
+  Changes are merged from pull requests after reviewing and testing.
+  Major releases can require configuration changes or data migration.
+* _Feature Freeze:_ No features are pulled in develop branch.
+  The code base get stabilized and get ready for a first release condidate.
+* _Stabilize code:_ Getting problems solved, missing unit tests are added, outstanding review are done, fixes are made and get _Continuous Integration_ green.
+  Preparation for _Release Candiate 1_
+* _Release Candidate 1 (RC1):_ Test phase driven be _OpenNMS community_.
+  Hotfixes can be made and applied to development branch during the test phase.
+* _Release Candidate 2 (RC2):_ Test phase with applied hot fixes from _RC1_
+* _Release:_ Release date for _OpenNMS Horizon_ which can be installed as _Stable_ release.
+
+Phases for releases are announced on the _OpenNMS Developers_ mailing list.
+Releases are announced on the _OpenNMS announce_ mailing list and can also be found as entry on the _OpenNMS Website_ and changes are published in link:http://www.opennms.org/wiki/New_and_noteworthy[Release Notes].
+
+[[ocwg-bug-tracking]]
+=== Bug tracking
+
+The _OpenNMS_ community appreciates feedback from user and tester.
+Any bug in code, documentation or workflows can help us to improve the project and the software.
+If you find a bug please verify it is not already been reported by searching _JIRAs_ bugs list: http://issues.opennms.org.
+In the top menu _Issues_, you can use _Search for Issues_ in the project _OpenNMS_ with _Type: Bug_.
+
+If you found a new bug, fill out a bug report:
+
+* Give a clear, concise summary
+* Provide as much detail as possible in the description
+  Paste in your command output or stack traces, link to screenshots, etc.
+* Be sure to include which version of the software you are using.
+  This is especially critical if you are using a development or unstable branch.
+* Add information about your Java environment which is used by OpenNMS.
+  You can find it in the configuration `java.conf` in your OpenNMS configuration directory and by running `java -version`
+* Any deployment-specific info is helpful as well.
+  Example: Ubuntu 14.04 LTS, which version of PostgreSQL, JRobin, RRDtool, store-by-group- or store-by-foreignsource settings.
+
+To verify bugs you can use the link:http://www.opennms.org/wiki/Mailing_lists[mailing lists] or the link:http://ask.opennms.eu/[Q&A board].
+
+[[ocwg-continuous-integration]]
+=== Continuous Integration
+
+For quality assurance we use _Atlassian Bamboo_ as _Continuous Integration_ (CI) system footnote:[Open Source Licensed, https://www.atlassian.com/software/bamboo].
+It is publicly available on http://bamboo.internal.opennms.com:8085.
+It provides the following tasks:
+
+* Checks code for compile errors
+* Runs unit and integration test infrastructure
+* Runs final smoke tests
+* Build and generates _Java API_ documentation
+* Build and generates version related documentation
+* Build and distribute _RPM_ and _DEB_ packages to public server
+
+All branches in the _OpenNMS GitHub repository_ will be processed by the _CI_ system.
+Feature branches and results are distributed to the public available repository server as _YUM_ and _DEB_ package.
+If you are interested to get your branch of your forked _OpenNMS_ processed through bamboo, please contact the _OpenNMS Developer_ mailing list.
+There are also branches intended to fix bugs, which means that they do not introduce new features.
+These branches are named after the _JIRA_ issue following the pattern NMS-{issue-number}.
+Builds are automatically triggered with changes in feature-, develop or master branches.
